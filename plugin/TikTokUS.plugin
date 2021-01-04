@@ -1,7 +1,3 @@
-[Rule]
-DOMAIN-SUFFIX,tiktokv.com,PROXY
-DOMAIN-SUFFIX,musical.ly,PROXY
-
 [URL Rewrite]
 (?<=_region=)CN(?=&) US 302
 (?<=\?version_code=)18.2..(?=.?.?&) 1 302
