@@ -1,0 +1,6 @@
+# 指定的域名
+DOMAIN-KEYWORD,speedtest
+DOMAIN-SUFFIX,ooklaserver.net
+DOMAIN-SUFFIX,speed.cloudflare.com
+DOMAIN-SUFFIX,v2rayssr.com
+DOMAIN-SUFFIX,heroku.com
