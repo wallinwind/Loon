@@ -25,7 +25,7 @@ proxies:
     - { name: 'CFSA-SG', type: vless, server: 8.222.221.163, port: 80, uuid: 66715dc1-eb36-42f0-8dc1-48db4087452e, udp: false, tls: false, network: ws, ws-opts: { path: '/?ed=2048', headers: { Host: worker-restless-bird-23f0.gowest.workers.dev } } }
     - { name: 'CFEC-SG', type: vless, server: 8.222.202.163, port: 80, uuid: 66715dc1-eb36-42f0-8dc1-48db4087452e, udp: false, tls: false, network: ws, ws-opts: { path: '/?ed=2048', headers: { Host: worker-twilight-shadow-2a8c.ecwm1qv8.workers.dev } } }
     - { name: 'CFNB-SG', type: vless, server: 8.222.254.91, port: 80, uuid: 66715dc1-eb36-42f0-8dc1-48db4087452e, udp: false, tls: false, network: ws, ws-opts: { path: '/?ed=2048', headers: { Host: worker-misty-smoke-d7f9.nb13l3ox.workers.dev } } }
-    - { name: 'CFTN-SG', type: vless, server: 47.245.114.114, port: 80, uuid: 66715dc1-eb36-42f0-8dc1-48db4087452e, udp: false, tls: false, network: ws, ws-opts: { path: '/?ed=2048', headers: { Host: worker-purple-butterfly-8379.tn9fw5-q.workers.dev } } }
+    - { name: 'CFTN-SG', type: vless, server: 8.222.187.4, port: 80, uuid: 66715dc1-eb36-42f0-8dc1-48db4087452e, udp: false, tls: false, network: ws, ws-opts: { path: '/?ed=2048', headers: { Host: worker-purple-butterfly-8379.tn9fw5-q.workers.dev } } }
     - { name: 'CF63-SG', type: vless, server: 47.245.117.196, port: 80, uuid: 66715dc1-eb36-42f0-8dc1-48db4087452e, udp: false, tls: false, network: ws, ws-opts: { path: '/?ed=2048', headers: { Host: worker-cold-moon-5edb.63cdk1pq.workers.dev } } }
 proxy-groups:
     - { name: Proxy, type: select, proxies: [自动选择, 故障转移, Auto_us, Auto_sg, 'CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'] }
