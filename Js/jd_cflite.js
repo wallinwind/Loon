@@ -29,10 +29,10 @@ proxies:
     - { name: 'CF63-SG', type: vless, server: 47.245.117.196, port: 80, uuid: 66715dc1-eb36-42f0-8dc1-48db4087452e, udp: false, tls: false, network: ws, ws-opts: { path: '/?ed=2048', headers: { Host: worker-cold-moon-5edb.63cdk1pq.workers.dev } } }
 proxy-groups:
     - { name: Proxy, type: select, proxies: [自动选择, 故障转移, Auto_us, Auto_sg, 'CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'] }
-    - { name: 自动选择, type: url-test, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
-    - { name: 故障转移, type: fallback, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
-    - { name: Auto_us, type: url-test, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
-    - { name: Auto_sg, type: url-test, proxies: ['CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
+    - { name: 自动选择, type: url-test, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
+    - { name: 故障转移, type: fallback, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
+    - { name: Auto_us, type: url-test, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
+    - { name: Auto_sg, type: url-test, proxies: ['CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
     - { name: EmbyVIP, type: select, proxies: [Proxy, DIRECT, Auto_us, Auto_sg] }
     - { name: EmbyDMM, type: select, proxies: [Proxy, Auto_us, Auto_sg] }
     - { name: ChatGPT, type: select, proxies: [Proxy, Auto_us, Auto_sg] }
