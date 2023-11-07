@@ -33,10 +33,10 @@ proxies:
     - { name: '香港 Cera Reality-Vision', type: vless, server: 156.251.182.115, port: 8006, uuid: 133b544b-a3ec-4f96-b3bd-f86b2e8396fa, flow: xtls-rprx-vision, client-fingerprint: chrome, udp: true, tls: true, servername: updates.cdn-apple.com, reality-opts: { public-key: sSKfx0nCMQw1DqK3irHZyTVmIV6LsH0Hu-n6iF5zzBE, short-id: 062f7da5 } }
 proxy-groups:
     - { name: Proxy, type: select, proxies: [自动选择, 故障转移, Auto_us, Auto_sg, 'CFT2-Test', 'CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG', '香港 Cera Hysteria2', '香港 Cera Reality-gRPC', '香港 Cera Reality-Vision'] }
-    - { name: 自动选择, type: url-test, proxies: ['CFT2-Test', 'CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
-    - { name: 故障转移, type: fallback, proxies: ['CFT2-Test', 'CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
-    - { name: Auto_us, type: url-test, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
-    - { name: Auto_sg, type: url-test, proxies: ['CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
+    - { name: 自动选择, type: url-test, proxies: ['CFT2-Test', 'CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
+    - { name: 故障转移, type: fallback, proxies: ['CFT2-Test', 'CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US', 'CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
+    - { name: Auto_us, type: url-test, proxies: ['CFIR-US', 'CFFG-US', 'CF12-US', 'CFNI-US', 'CFCD-US', 'CFZ6-US'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
+    - { name: Auto_sg, type: url-test, proxies: ['CFF3-SG', 'CFSA-SG', 'CFEC-SG', 'CFNB-SG', 'CFTN-SG', 'CF63-SG'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
     - { name: EmbyVIP, type: select, proxies: [Proxy, DIRECT, Auto_us, Auto_sg, '香港 Cera Hysteria2', '香港 Cera Reality-gRPC', '香港 Cera Reality-Vision'] }
     - { name: EmbyDMM, type: select, proxies: [Proxy, Auto_us, Auto_sg, '香港 Cera Hysteria2', '香港 Cera Reality-gRPC', '香港 Cera Reality-Vision'] }
     - { name: ChatGPT, type: select, proxies: [Proxy, Auto_us, Auto_sg] }
