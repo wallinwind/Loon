@@ -72,7 +72,6 @@ rules:
     - 'DOMAIN-SUFFIX,vampirehk.eu.org,Global TV'
     - 'DOMAIN-KEYWORD,stream-link,Global TV'
     - 'DOMAIN-SUFFIX,revenuecat.com,Global TV'
-    - 'DOMAIN-SUFFIX,hkdvb.com,Global TV'
     - 'DOMAIN-SUFFIX,a.ckm.iqiyi.com,AdBlock'
     - 'DOMAIN-SUFFIX,ad.m.iqiyi.com,AdBlock'
     - 'DOMAIN-SUFFIX,afp.iqiyi.com,AdBlock'
