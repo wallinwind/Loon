@@ -73,7 +73,7 @@ rules:
     - 'DOMAIN-KEYWORD,stream-link,Global TV'
     - 'DOMAIN-SUFFIX,revenuecat.com,Global TV'
     - 'DOMAIN-SUFFIX,hoy.tv,Global TV'
-    - 'DOMAIN-SUFFIX,wanjiatv.net,DIRECT'
+    - 'DOMAIN-SUFFIX,wanjiatv.net,YouTube'
     - 'DOMAIN-SUFFIX,a.ckm.iqiyi.com,AdBlock'
     - 'DOMAIN-SUFFIX,ad.m.iqiyi.com,AdBlock'
     - 'DOMAIN-SUFFIX,afp.iqiyi.com,AdBlock'
