@@ -94,7 +94,7 @@ rules:
     - 'DOMAIN-SUFFIX,hoy.tv,Global TV'
     - 'DOMAIN-SUFFIX,plutotv.net,Global TV'
     - 'DOMAIN-SUFFIX,pluto.tv,Global TV'
-    - 'DOMAIN-KEYWORD,amagi.tv,Global TV'
+    - 'DOMAIN-KEYWORD,amagi.tv,Auto_us'
     - 'DOMAIN-SUFFIX,wurl.tv,DIRECT'
     - 'DOMAIN-SUFFIX,wurl.com,DIRECT'
     - 'DOMAIN-SUFFIX,cloudfront.net,DIRECT'
