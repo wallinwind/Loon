@@ -86,7 +86,7 @@ rules:
     - 'DOMAIN-SUFFIX,emby.to,EmbyVIP'
     - 'DOMAIN-SUFFIX,emby.gg,Proxy'
     - 'DOMAIN-SUFFIX,emby.wtf,Proxy'
-    - 'DOMAIN-SUFFIX,jmsooo.com,CFTR'
+    - 'DOMAIN-SUFFIX,jmsooo.com,Netflix'
     - 'DOMAIN-KEYWORD,stream-link,Netflix'
     - 'DOMAIN-SUFFIX,vampirehk.eu.org,Proxy'
     - 'DOMAIN-SUFFIX,revenuecat.com,Global TV'
