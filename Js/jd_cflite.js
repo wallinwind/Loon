@@ -26,9 +26,10 @@ proxies:
     - {name: '🇺🇸 US-SAN JOSE-SJC 01', server: 43.153.80.208, port: 443, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, servername: 1.jerek.cloudns.ch, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 1.jerek.cloudns.ch}}, udp: true}
     - {name: '🇺🇸 圣何塞1-双栈-直连 01', server: us-lb.anydoor.xyz, port: 443, type: vless, uuid: 7442b3cd-b288-47fa-a8d7-840723123a8f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: b5OK1ul-o73Ok3O7CAuXTanZqI57YNCG-xmPAVLx6HA, short-id: "0e6208b8" }, servername: us1.1-blog.buzz, client-fingerprint: chrome, network: tcp, udp: true}
     - {name: '🇺🇸 俄勒冈1-双栈-直连 01', server: se.anydoor.xyz, port: 443, type: vless, uuid: 7442b3cd-b288-47fa-a8d7-840723123a8f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: BCBvqbiIxPOeLFgmq2cU-DHvpHbD0gUgL4IChZXfgFc, short-id: "92058bb4" }, servername: us7.1-blog.buzz, client-fingerprint: chrome, network: tcp, udp: true}
+    - {name: '🇺🇸 US-156', server: 156.146.38.167, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
     - {name: '🇰🇷 NRT 01', server: 59.3.3.161, port: 443, type: trojan, password: CMLiu, sni: trojan.pagess.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: trojan.pagess.filegear-sg.me}}, udp: true}
 proxy-groups:
-    - { name: Proxy, type: select, proxies: [CFTR, '🇺🇸 US-SAN JOSE-SJC 01', '🇺🇸 圣何塞1-双栈-直连 01', '🇺🇸 俄勒冈1-双栈-直连 01', '🇰🇷 NRT 01'] }
+    - { name: Proxy, type: select, proxies: [CFTR, '🇺🇸 US-SAN JOSE-SJC 01', '🇺🇸 圣何塞1-双栈-直连 01', '🇺🇸 俄勒冈1-双栈-直连 01', '🇺🇸 US-156', '🇰🇷 NRT 01'] }
     - { name: CFTR, type: url-test, proxies: ['🇺🇸 YX01-US-V6', '🇺🇸 YX02-US-V6', '🇺🇸 YX03-US-V6', '🇺🇸 YX04-US-V6', '🇺🇸 YX05-US-V6', '🇺🇸 CFT2-US-V6', '🇬🇧 CFNB-UK-V6', '🇬🇧 CFCD-UK-V6'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
     - { name: EmbyVIP, type: select, proxies: [Proxy, DIRECT, CFTR] }
     - { name: EmbyDMM, type: select, proxies: [Proxy, CFTR] }
@@ -37,7 +38,7 @@ proxy-groups:
     - { name: Apple, type: select, proxies: [DIRECT, Proxy, CFTR] }
     - { name: Microsoft, type: select, proxies: [DIRECT, Proxy, CFTR] }
     - { name: Steam, type: select, proxies: [DIRECT, Proxy] }
-    - { name: Netflix, type: select, proxies: [Proxy, '🇺🇸 US-SAN JOSE-SJC 01', '🇺🇸 圣何塞1-双栈-直连 01', '🇺🇸 俄勒冈1-双栈-直连 01', '🇰🇷 NRT 01'] }
+    - { name: Netflix, type: select, proxies: [Proxy] }
     - { name: Spotify, type: select, proxies: [Proxy, CFTR] }
     - { name: YouTube, type: select, proxies: [Proxy, CFTR] }
     - { name: Disney, type: select, proxies: [Proxy] }
