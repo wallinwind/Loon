@@ -26,13 +26,10 @@ proxies:
     - {name: '🇺🇸 US-SAN JOSE-SJC 01', server: 43.153.80.208, port: 443, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, servername: 1.jerek.cloudns.ch, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 1.jerek.cloudns.ch}}, udp: true}
     - {name: '🇺🇸 US-0-0', type: hysteria2, server: 207.90.239.157, port: 3400, password: dongtaiwang.com, sni: www.bing.com, skip-cert-verify: true}
     - {name: '🇰🇷 NRT 01', server: 59.3.3.161, port: 443, type: trojan, password: CMLiu, sni: trojan.pagess.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: trojan.pagess.filegear-sg.me}}, udp: true}
-    - {name: '🇰🇷 KR 16', server: 118.41.119.123, port: 12000, type: vless, uuid: 95a7daa2-a76c-4ecb-9c84-1948c4e92666, tls: true, servername: pages.dnsorg.filegear-sg.me, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: pages.dnsorg.filegear-sg.me}}, udp: true}
-    - {name: '🇭🇰 HK_0250', network: ws, port: 50448, server: 47.238.245.22, servername: pages.tcorg.filegear-sg.me, skip-cert-verify: false, tls: true, type: vless, udp: true, uuid: 1b36afe3-79d3-42c5-8ac2-407ca73ce300, ws-opts: {headers: {Host: pages.tcorg.filegear-sg.me}, path: "/?ed=2048"}}
-    - {name: '🇭🇰 HK_0251', network: ws, port: 35181, server: 165.154.43.92, servername: pages.tcorg.filegear-sg.me, skip-cert-verify: false, tls: true, type: vless, udp: true, uuid: 1b36afe3-79d3-42c5-8ac2-407ca73ce300, ws-opts: {headers: {Host: pages.tcorg.filegear-sg.me}, path: "/?ed=2048"}}
+    - {name: "🇰🇷 KR_0286", network: ws, port: 11965, server: 59.29.116.20, servername: global2.ccdd.site, skip-cert-verify: false, tls: true, type: vless, udp: true, uuid: e8899a8e-729a-43bc-aebf-95e12c6c6db6, ws-opts: {headers: {Host: global2.ccdd.site }, path: "/?ed=2560"}}
     - {name: '🇨🇳 TW_0375', network: ws, port: 10004, server: 114.34.202.224, servername: global2.ccdd.site, skip-cert-verify: false, tls: true, type: vless, udp: true, uuid: e8899a8e-729a-43bc-aebf-95e12c6c6db6, ws-opts: {headers: {Host: global2.ccdd.site}, path: "/?ed=2560"}}
-    - {name: '🇯🇵 JP_0280', network: ws, port: 34446, server: 206.190.238.68, servername: pages.tcorg.filegear-sg.me, skip-cert-verify: false, tls: true, type: vless, udp: true, uuid: 1b36afe3-79d3-42c5-8ac2-407ca73ce300, ws-opts: { headers: {Host: pages.tcorg.filegear-sg.me}, path: "/?ed=2048"}}
 proxy-groups:
-    - { name: Proxy, type: select, proxies: [CFTR, '🇺🇸 US-SAN JOSE-SJC 01', '🇺🇸 US-0-0', '🇰🇷 NRT 01', '🇰🇷 KR 16', '🇭🇰 HK_0250', '🇭🇰 HK_0251', '🇨🇳 TW_0375', '🇯🇵 JP_0280'] }
+    - { name: Proxy, type: select, proxies: [CFTR, '🇺🇸 US-SAN JOSE-SJC 01', '🇺🇸 US-0-0', '🇰🇷 NRT 01', "🇰🇷 KR_0286", '🇨🇳 TW_0375'] }
     - { name: CFTR, type: url-test, proxies: ['🇺🇸 YX01-US-V6', '🇺🇸 YX02-US-V6', '🇺🇸 YX03-US-V6', '🇺🇸 YX04-US-V6', '🇺🇸 YX05-US-V6', '🇺🇸 CFT2-US-V6', '🇬🇧 CFNB-UK-V6', '🇬🇧 CFCD-UK-V6'], url: 'http://www.gstatic.com/generate_204', interval: 300 }
     - { name: EmbyVIP, type: select, proxies: [Proxy, DIRECT, CFTR] }
     - { name: EmbyDMM, type: select, proxies: [Proxy, CFTR] }
@@ -63,7 +60,6 @@ rules:
     - 'DOMAIN-SUFFIX,emby.to,EmbyVIP'
     - 'DOMAIN-SUFFIX,emby.gg,Proxy'
     - 'DOMAIN-SUFFIX,emby.wtf,Proxy'
-    - 'DOMAIN-SUFFIX,jmsooo.com,Proxy'
     - 'DOMAIN-SUFFIX,jmsuper.com,Proxy'
     - 'DOMAIN-KEYWORD,stream-link,Global TV'
     - 'DOMAIN-SUFFIX,vampirehk.eu.org,Global TV'
